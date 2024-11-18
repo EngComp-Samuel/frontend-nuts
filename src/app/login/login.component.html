@@ -1,0 +1,88 @@
+<div class="container" style="color: bg-gray-100;">
+  
+      <!-- Outer Row -->
+      <div class="row justify-content-center">
+  
+        <div class="col-xl-10 col-lg-12 col-md-9">
+  
+          <div class="card o-hidden border-0 shadow-lg my-5">
+            <div class="card-body p-0">
+              <!-- Nested Row within Card Body -->
+              <div class="row">
+              <div class="col-lg-3">
+              </div>
+                <div class="col-lg-6">
+                  <div class="p-4">
+                    <div class="text-center">
+                    <img src="/public/logo.png" />
+                      <h1 class="h2 text-gray-600 mb-4">Bem - Vindo!</h1>
+                    </div>
+                    
+                    <!-- ######################################################################### -->
+                   
+                   
+                    <ng-template [ngIf]="ifValorFalse">
+                      <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                        <span aria-hidden="true">&times;</span></button>
+                        <div> <i class="fa fa-exclamation-circle"></i> Usuário/Senha não conferem</div>
+                     </div>
+                   </ng-template>
+                   
+
+                   
+                                          
+                    
+                    
+                    <!-- ######################################################################### -->
+                                                            
+                    <form class="user" method="post" th:action="@{/login}"
+                    accept-charset="utf-8" th:accept-charset="utf-8">
+                      <div class="form-group" style="padding-bottom: 1rem;">
+                        <input type="text" class="form-control form-control-user" id="InputEmail" 
+                        aria-describedby="emailHelp" placeholder="Email..." name="username">
+                      </div>
+                      <div class="form-group" style="padding-bottom: 1rem;">
+                        <input type="password" class="form-control form-control-user" id="InputPassword" 
+                        placeholder="Senha" name="password">
+                      </div>
+                      
+                      <div style="margin-right: 1rem;">
+                        Esqueceu a senha? 
+                        <a class="text-center" routerLink="/apresentacao" routerLinkActive="active">
+                          Resetar senha
+                        </a>
+                      </div>
+                      <div class="text-center" style="margin: 2rem;">
+
+                        <button type="submit"
+                            class="btn btn-primary btn-block shadow" value="Entrar"
+                            title="Entrar" style="margin-right: 1rem;">Entrar
+                        </button>
+
+                        <button type="submit"
+                            class="btn btn-secundary btn-block shadow" value="Cancelar"
+                            title="Cancelar" routerLink="/apresentacao" routerLinkActive="active" style="margin-left: 1rem;">Cancelar
+                        </button>
+
+                      </div>
+                        
+                      
+
+                    </form>
+                    <hr>
+                    
+                    <div class="text-center">
+                      <a class="small" style="margin-right: 2rem;" routerLink="/apresentacao" routerLinkActive="active">Criar uma Conta</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+  
+        </div>
+  
+      </div>
+  
+    </div>  
